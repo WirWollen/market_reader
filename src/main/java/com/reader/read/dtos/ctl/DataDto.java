@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,5 +21,5 @@ public class DataDto {
     private CustomerDto customer;
     private CustomerIdsDto customer_ids;
     private Long expires;
-    private Double timestamp;
+    private BigDecimal timestamp;
 }
