@@ -7,6 +7,10 @@ import java.util.List;
 
 @Component
 public class CookieGenerator {
+    public String getTuid() {
+        return "_tuid=0e098f3690b96751a2a774e993b0229c6adac781";
+    }
+
     public String generateCookie() {
         List<String> args = new ArrayList<>();
         StringBuilder builder = new StringBuilder("");
@@ -41,7 +45,8 @@ public class CookieGenerator {
 //        args.add("_ga_DDRSRL2E1B=GS1.1.1704626866.1.1.1704626872.54.0.0;");
 //        args.add("_ga_DDRSRL2E1B-DG=GS1.1.1704626866.1.1.1704626872.0.0.0");
 
-        args.add("_tuid=2bf867245a75bee55946470d3856ffcd2d703946; expires=Sun, 09 Feb 2025 18:56:38 GMT; domain=.citilink.ru; path=/");
+        args.add(getTuid());
+        args.add("; expires=Sun, 09 Feb 2025 18:56:38 GMT; domain=.citilink.ru; path=/");
 
         args.forEach(el -> builder.append(el).append(" "));
 
