@@ -19,20 +19,15 @@ public class AuthCaller {
     @Autowired
     private Auth auth;
     private final RestTemplate restTemplate = new RestTemplate();
-    private String bulk = "https://ctl-api.exponea.com/bulk";
+    private final String bulk = "https://ctl-api.exponea.com/bulk";
 
-//    @Scheduled(fixedRate = 600)
     public FullAuthDto result() {
         HttpHeaders headers = new HttpHeaders();
-        String url = "/product/monitor-aoc-27-value-line-27b2h-00-01-chernyi-ips-led-5ms-16-9-hdmi-ma-1367499/";
-
-        String url2 = "https://www.citilink.ru/product/noutbuk-infinix-inbook-y3-max-yl613-i5-1235u-16gb-ssd512gb-16-ips-fhd-1982262/";
-
-
-        HttpHeaders headers1 = new HttpHeaders();
+        String url = "https://www.citilink.ru";
+        String url2 = "/product/noutbuk-infinix-inbook-y3-max-yl613-i5-1235u-16gb-ssd512gb-16-ips-fhd-1982262/";
 
 
-        ResponseEntity<String> responseEntity = restTemplate.exchange(url2, HttpMethod.GET, null, String.class);
+        ResponseEntity<String> responseEntity = restTemplate.exchange(url + url2, HttpMethod.GET, null, String.class);
         HttpHeaders headers2 = responseEntity.getHeaders();
         String tuidComplex = headers2.get("set-cookie").get(0);
 
@@ -47,7 +42,7 @@ public class AuthCaller {
         }
 
         ResponseEntity<FullAuthDto> response = restTemplate.postForEntity(bulk, new HttpEntity<>(auth.generateGlobalSendDataDto(
-                url,
+                url2,
                 UUID.randomUUID().toString(),
                 UUID.randomUUID().toString(),
                 tuid
