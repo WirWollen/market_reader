@@ -1,16 +1,15 @@
-package com.reader.read.dtos.citilink;
+package com.reader.read.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Citilink {
-    private List<Sources> sources;
+public class InputItemDto {
+    private Long id;
+    private String url;
 }
