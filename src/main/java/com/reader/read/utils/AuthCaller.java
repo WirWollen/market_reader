@@ -18,6 +18,8 @@ import java.util.regex.Pattern;
 public class AuthCaller {
     @Autowired
     private Auth auth;
+    @Autowired
+    GraphQLRequest graphQLRequest;
     private final RestTemplate restTemplate = new RestTemplate();
     private final String bulk = "https://ctl-api.exponea.com/bulk";
 
@@ -40,6 +42,8 @@ public class AuthCaller {
         if (matcher.find()) {
             tuid = matcher.group();
         }
+
+        graphQLRequest.test(tuid, url + url2);
 
         ResponseEntity<FullAuthDto> response = restTemplate.postForEntity(bulk, new HttpEntity<>(auth.generateGlobalSendDataDto(
                 url2,
