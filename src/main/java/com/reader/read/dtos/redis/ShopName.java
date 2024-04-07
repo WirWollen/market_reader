@@ -1,4 +1,4 @@
-package com.reader.read.dtos.util;
+package com.reader.read.dtos.redis;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -8,9 +8,9 @@ import lombok.ToString;
 @Getter
 @ToString
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
-public enum UniversalCurrency {
-    RUB("RUB", "PRICE_IN_RUB");
+public enum ShopName {
+    CITILINK("citilink"),
+    DNS("dns");
 
     private final String name;
-    private final String marketName;
 }

@@ -9,11 +9,10 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class ItemBuilder {
-    public static OutputItemDto buildOutput(Long price, Long id, Integer marketId) {
+    public static OutputItemDto buildOutput(Long price, Long id) {
         var output = new OutputItemDto();
         output.setId(id);
         output.setPrice(price);
-        output.setMarketId(marketId);
         output.setTimeChecking(LocalDateTime.now());
 
         return output;

@@ -1,4 +1,4 @@
-package com.reader.read.dtos;
+package com.reader.read.dtos.redis;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class WeaponTypeDto {
+public class OuterDto {
     private Long id;
-    private String type;
+    private String url;
 }

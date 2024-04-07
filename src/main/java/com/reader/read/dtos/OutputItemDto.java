@@ -14,6 +14,5 @@ import java.time.LocalDateTime;
 public class OutputItemDto {
     private Long id;
     private Long price;
-    private Integer marketId;
     private LocalDateTime timeChecking;
 }

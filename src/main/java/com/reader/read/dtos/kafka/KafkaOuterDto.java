@@ -1,4 +1,4 @@
-package com.reader.read.dtos;
+package com.reader.read.dtos.kafka;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class InputItemDto {
+public class KafkaOuterDto {
     private Long id;
-    private String url;
+    private Long price;
 }
