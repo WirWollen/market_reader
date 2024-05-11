@@ -41,7 +41,7 @@ public class Scheduler {
     @SneakyThrows
     private void buildItem(OuterDto dto) {
         Node h1 = Jsoup.connect(dto.getUrl()).get().select(span).get(0).childNode(0);
-        OutputItemDto output = ItemBuilder.buildOutput(Long.valueOf(h1.toString().replaceAll("[^0-9]", "")), dto.getId());
+        OutputItemDto output = ItemBuilder.buildOutput(Long.valueOf(h1.toString().replaceAll("[^0-9]", "")), dto);
         senderService.send(output);
     }
 }

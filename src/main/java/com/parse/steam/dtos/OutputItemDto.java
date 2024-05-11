@@ -15,5 +15,5 @@ import java.time.LocalDateTime;
 public class OutputItemDto implements Serializable {
     private Long id;
     private Long price;
-    private LocalDateTime timeChecking;
+    private String timeChecking;
 }
