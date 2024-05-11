@@ -18,7 +18,7 @@ import java.util.Map;
 
 @Component
 @EnableScheduling
-public class TestComponent {
+public class Scheduler {
     @Autowired
     private RedisEntryBean entryBean;
 

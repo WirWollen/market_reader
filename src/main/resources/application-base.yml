@@ -35,3 +35,4 @@ spring:
     allow-bean-definition-overriding: true
     allow-circular-references: true
 span: __next > div > main > div.app-catalog-avk7an.ewgkexk0 > div.e19lhdq00.app-catalog-1sbr2xg.e164boj10 > div > div.app-catalog-1u5zjt4.e6riv00 > div > div.app-catalog-qhusmh.eme04gi0 > div:nth-child(4) > div.app-catalog-0.e33gsaq0 > div > div.app-catalog-0.e1xrzi9t0 > span > span > span.e1j9birj0.e106ikdt0.app-catalog-8hy98m.e1gjr6xo0
+market: citilink_monitor

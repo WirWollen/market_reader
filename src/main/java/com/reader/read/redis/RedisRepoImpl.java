@@ -1,9 +1,9 @@
 package com.reader.read.redis;
 
 import com.reader.read.dtos.redis.OuterDto;
-import com.reader.read.dtos.redis.ShopName;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -11,15 +11,16 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 @Service
-public class CitilinkRedisRepoImpl implements RedisRepo {
-    private static final String CITILINK = ShopName.CITILINK.getName();
+public class RedisRepoImpl implements RedisRepo {
+    @Value(value = "${market}")
+    private String redisKey;
 
-    private RedisTemplate<String, Object> redisTemplate;
+    private final RedisTemplate<String, Object> redisTemplate;
 
     private HashOperations<String, Long, OuterDto> hashOperations;
 
     @Autowired
-    public CitilinkRedisRepoImpl(RedisTemplate<String, Object> redisTemplate) {
+    public RedisRepoImpl(RedisTemplate<String, Object> redisTemplate) {
         this.redisTemplate = redisTemplate;
     }
 
@@ -31,11 +32,11 @@ public class CitilinkRedisRepoImpl implements RedisRepo {
 
     @Override
     public OuterDto findById(Long id) {
-        return hashOperations.get(CITILINK, id);
+        return hashOperations.get(redisKey, id);
     }
 
     @Override
     public Map<Long, OuterDto> findAll() {
-        return hashOperations.entries(CITILINK);
+        return hashOperations.entries(redisKey);
     }
 }
