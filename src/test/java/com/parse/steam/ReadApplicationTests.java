@@ -1,4 +1,4 @@
-package com.reader.read;
+package com.parse.steam;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

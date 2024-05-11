@@ -1,4 +1,4 @@
-package com.reader.read.dtos.redis;
+package com.parse.steam.dtos.redis;
 
 import lombok.AccessLevel;
 import lombok.Getter;

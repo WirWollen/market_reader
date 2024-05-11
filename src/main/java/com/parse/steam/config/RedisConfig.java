@@ -1,4 +1,4 @@
-package com.reader.read.config;
+package com.parse.steam.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.EnableCaching;

@@ -1,4 +1,4 @@
-package com.reader.read.config;
+package com.parse.steam.config;
 
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;

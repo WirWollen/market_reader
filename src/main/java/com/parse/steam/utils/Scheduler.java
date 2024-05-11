@@ -1,10 +1,10 @@
-package com.reader.read.utils;
+package com.parse.steam.utils;
 
-import com.reader.read.builders.ItemBuilder;
-import com.reader.read.config.RedisEntryBean;
-import com.reader.read.dtos.OutputItemDto;
-import com.reader.read.dtos.redis.OuterDto;
-import com.reader.read.services.SenderService;
+import com.parse.steam.config.RedisEntryBean;
+import com.parse.steam.dtos.redis.OuterDto;
+import com.parse.steam.builders.ItemBuilder;
+import com.parse.steam.dtos.OutputItemDto;
+import com.parse.steam.services.SenderService;
 import lombok.SneakyThrows;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Node;

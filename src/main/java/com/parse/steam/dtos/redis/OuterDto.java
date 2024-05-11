@@ -1,4 +1,4 @@
-package com.reader.read.dtos;
+package com.parse.steam.dtos.redis;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,14 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OutputItemDto implements Serializable {
+public class OuterDto implements Serializable {
     private Long id;
-    private Long price;
-    private LocalDateTime timeChecking;
+    private Long categoryId;
+    private String shopName;
+    private String url;
 }

@@ -1,7 +1,7 @@
-package com.reader.read.config;
+package com.parse.steam.config;
 
-import com.reader.read.dtos.redis.OuterDto;
-import com.reader.read.redis.RedisRepoImpl;
+import com.parse.steam.dtos.redis.OuterDto;
+import com.parse.steam.redis.RedisRepoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -20,7 +20,7 @@ public class RedisEntryBean {
         if (citilinkItems == null) {
             updateCitilinkItems();
         }
-        return citilinkItems;
+        return citilink.findAll();
     }
 
     @Bean

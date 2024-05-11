@@ -1,6 +1,6 @@
-package com.reader.read.builders;
+package com.parse.steam.builders;
 
-import com.reader.read.dtos.OutputItemDto;
+import com.parse.steam.dtos.OutputItemDto;
 import lombok.Getter;
 import lombok.Setter;
 

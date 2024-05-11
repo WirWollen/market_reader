@@ -1,6 +1,6 @@
-package com.reader.read.redis;
+package com.parse.steam.redis;
 
-import com.reader.read.dtos.redis.OuterDto;
+import com.parse.steam.dtos.redis.OuterDto;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

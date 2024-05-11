@@ -1,6 +1,6 @@
-package com.reader.read.config;
+package com.parse.steam.config;
 
-import com.reader.read.dtos.OutputItemDto;
+import com.parse.steam.dtos.OutputItemDto;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;

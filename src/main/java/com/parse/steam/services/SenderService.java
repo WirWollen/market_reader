@@ -1,6 +1,6 @@
-package com.reader.read.services;
+package com.parse.steam.services;
 
-import com.reader.read.dtos.OutputItemDto;
+import com.parse.steam.dtos.OutputItemDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
